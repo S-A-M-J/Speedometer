@@ -32,7 +32,10 @@ class incomingCallbackHandler : public BLECharacteristicCallbacks {
       messagePart = strtok(NULL, delimiter);
       if (strcmp(messagePart, password) == 0) {
         pwOk = true;
-        speedoRxCharacteristic.setValue("pwOk");
+        speedoRxCharacteristic.setValue("pwOk#pw");
+        speedoRxCharacteristic.notify();
+      } else {
+        speedoRxCharacteristic.setValue("failedAuth");
         speedoRxCharacteristic.notify();
       }
     } else if (pwOk) {
