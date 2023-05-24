@@ -30,8 +30,10 @@ function checkPw() {
 function checkValue(value, topic) {
   let sanitizer = checkUserString(value, 6);
   if (sanitizer != null) {
-    statusTitle.style.color = 'red';
-    statusTitle.textContent = sanitizer;
+    if(statusTitle){
+      statusTitle.style.color = 'red';
+      statusTitle.textContent = sanitizer;
+    }
   } else {
     sendData("#" + topic + "," + value);
   }
