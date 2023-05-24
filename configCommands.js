@@ -29,11 +29,11 @@ function checkPw() {
 
 function checkValue(value, topic) {
   let sanitizer = checkUserString(value, 6);
-  if (sanitizer == null) {
-    sendData("#" + topic + "," + value);
-  } else {
+  if (sanitizer != null) {
     statusTitle.style.color = 'red';
     statusTitle.textContent = sanitizer;
+  } else {
+    sendData("#" + topic + "," + value);
   }
 }
 
