@@ -33,7 +33,6 @@ function gotCharacteristics(error, characteristics) {
 
     blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
     connectButton.hide();
-    showPasswordParam();
     // Add a event handler when the device is disconnected
     blueTooth.onDisconnected(onDisconnected);
   }
