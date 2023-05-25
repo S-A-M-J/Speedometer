@@ -58,6 +58,7 @@ function setup() {
   createCanvas(1000, ppKmUpdateButton.y + 100);
 
   hidePasswordParam();
+  hideUnconnected();
 }
 
 function draw() {

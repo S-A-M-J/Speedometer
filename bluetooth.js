@@ -66,6 +66,7 @@ function onDisconnected() {
   console.log('Device got disconnected.');
   connectButton.show();
   hidePasswordParam();
+  hideUnconnected();
 }
 
 function sendData(data) {
