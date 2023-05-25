@@ -30,7 +30,7 @@ function gotCharacteristics(error, characteristics) {
         console.log('detected second characteristic');
       }
     }
-
+    isConnected = blueTooth.isConnected();
     blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
     connectButton.hide();
     // Add a event handler when the device is disconnected

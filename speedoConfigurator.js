@@ -5,6 +5,7 @@ let blueToothTXCharacteristic;//this is a blu
 let blueTooth;
 let connectButton;
 let speedologoImg;
+let isConnected;
 
 
 
