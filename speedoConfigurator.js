@@ -46,7 +46,7 @@ function setup() {
   kmstandInput.position(kmstandTitle.x + kmstandTitle.size().width + 5 , yPositionStart);
   kmstandUpdateButton = createButton('Update');
   kmstandUpdateButton.position(kmstandInput.x + kmstandInput.size().width + 5, kmstandInput.y);
-  kmstandUpdateButton.mousePressed(checkValue(kmstandInput.value(), "kmStand"));
+  kmstandUpdateButton.mousePressed(checkKMValue);
   //**************************************
   ppKmTitle = createElement('h3', 'Enter new pulses per KM');
   ppKmTitle.position(10, kmstandUpdateButton.y + kmstandUpdateButton.size().height + 30);
@@ -54,7 +54,7 @@ function setup() {
   ppKmInput.position(ppKmTitle.x + ppKmTitle.size().width + 5 , ppKmTitle.y);
   ppKmUpdateButton = createButton('Update');
   ppKmUpdateButton.position(ppKmInput.x + ppKmInput.size().width + 5, ppKmInput.y);
-  ppKmUpdateButton.mousePressed(checkValue(ppKmInput.value(), "ppKM"));
+  ppKmUpdateButton.mousePressed(checkppKMValue);
 
   createCanvas(1000, ppKmUpdateButton.y + 100);
 

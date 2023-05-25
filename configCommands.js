@@ -27,15 +27,27 @@ function checkPw() {
   }
 }
 
-function checkValue(value, topic) {
-  let sanitizer = checkUserString(value, 6);
+function checkppKMValue() {
+  let sanitizer = checkUserString(ppKmInput.value(), 6, true);
   if (sanitizer != null) {
     if(statusTitle){
       statusTitle.style.color = 'red';
       statusTitle.textContent = sanitizer;
     }
   } else {
-    sendData("#" + topic + "," + value);
+    sendData("#ppKm," + ppKmInput.value());
+  }
+}
+
+function checkKMValue() {
+  let sanitizer = checkUserString(kmstandInput.value(), 6, true);
+  if (sanitizer != null) {
+    if(statusTitle){
+      statusTitle.style.color = 'red';
+      statusTitle.textContent = sanitizer;
+    }
+  } else {
+    sendData("#kmstand," + kmstandInput.value());
   }
 }
 
