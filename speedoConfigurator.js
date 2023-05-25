@@ -31,10 +31,8 @@ function setup() {
   connectButton.style('background-color', color(77, 158, 106));
 
   let yPositionStart = 200;
-  pwTitle = createElement('h3', 'Please enter password');
-  pwTitle.position(10, yPositionStart);
-  pwInput = createInput('', 'password');
-  pwInput.position(10, pwTitle.y + pwTitle.size().height + 2);
+  pwInput = createInput('Enter password');
+  pwInput.position(10, yPositionStart);
   verifyButton = createButton('Verify');
   verifyButton.position(pwInput.x + pwInput.size().width + 5, pwInput.y);
   verifyButton.mousePressed(checkPw);
