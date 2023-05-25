@@ -1,5 +1,4 @@
 function showPasswordParam() {
-  pwTitle.hide();
   pwInput.hide();
   verifyButton.hide();
   kmstandTitle.show();
@@ -11,7 +10,6 @@ function showPasswordParam() {
 }
 
 function hidePasswordParam() {
-  pwTitle.show();
   pwInput.show();
   verifyButton.show();
   kmstandTitle.hide();
@@ -22,4 +20,8 @@ function hidePasswordParam() {
   ppKmUpdateButton.hide();
 }
 
+function hideUnconnected(){
+  pwInput.hide();
+  verifyButton.hide();
+}
 
